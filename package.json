@@ -1,0 +1,27 @@
+{
+  "name": "@writetome51/array-get-all-after",
+  "version": "1.0.0",
+  "description": "2 functions that return everything after the first instance or last instance of a particular value in an array",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "array",
+    "manipulation",
+    "get",
+    "all",
+    "after",
+    "before",
+    "value"
+  ],
+  "author": "Steve Thompson",
+  "license": "MIT",
+  "homepage": "https://github.com/writetome51/array-get-all-after#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "@writetome51/array-get-all-before-after-index": "~1.0.3",
+    "@writetome51/array-get-indexes": "~1.0.0"
+  }
+}
