@@ -1,28 +1,34 @@
-# getBetween(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numItemsToIgnoreAtEachEnd,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>): any[]
+# getAllAfterFirst(value, array): any[]
 
-Returns everything between `numItemsToIgnoreAtEachEnd` in `array`.  
+Returns everything after the first instance of `value` in `array`. 
 Does not modify `array`.
 
+# getAllAfterLast(value, array): any[]
 
-Examples:
+Returns everything after the last instance of `value` in `array`.  Does not modify `array`.
+
+For both functions, `value` cannot be an object.  Arrays are OK.
+
+## Examples
 ```
-let arr = [1,2,3,4,5,6,7,8,9,10];
-let middle = getBetween(2, arr); // ignores first 2 and last 2 items.
-// middle is now [3,4,5,6,7,8]
+let arr = [1,2,3,4,2,3,4,5];
+getAllAfterFirst(2, arr);
+// --> [3,4,2,3,4,5]
 
-middle = getBetween(4, arr); // ignores first 4 and last 4 items.
-// middle is now [5,6]
+getAllAfterLast(2, arr);
+// --> [3,4,5]
 ```
 
 ## Installation
-`npm i  @writetome51/array-get-between`
+`npm i  @writetome51/array-get-all-after`
 
 
 ## Loading
 ```
 // if using TypeScript:
-import {getBetween} from '@writetome51/array-get-between'
+import {getAllAfterFirst, getAllAfterLast} from '@writetome51/array-get-all-after'
     
 // if using ES5 JavaScript:
-var getBetween = require('@writetome51/array-get-between').getBetween;
+var getAllAfterFirst = require('@writetome51/array-get-all-after').getAllAfterFirst;
+var getAllAfterLast = require('@writetome51/array-get-all-after').getAllAfterLast;
 ```
